@@ -1,0 +1,12 @@
+# Core
+pydub>=23.0.0
+SpeechRecognition>=3.10.0
+
+# Document output
+python-docx>=1.0.0
+
+# Config
+PyYAML>=6.0
+
+# Optional: uncomment for local Whisper (better accuracy, no API)
+# openai-whisper>=20231117

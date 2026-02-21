@@ -1,0 +1,16 @@
+# Alphaaz custom language mapping
+# Map transcribed words/phrases to your custom language output.
+# Keys are matched case-insensitively; longest match wins.
+
+mappings:
+  # Example mappings (replace with your own vocabulary)
+  hello: "αλφα"
+  world: "ααζ"
+  thank you: "θανα"
+  goodbye: "γβ"
+  yes: "ψ"
+  no: "ν"
+
+# Optional: character-level fallback when no phrase matches
+# If true, unknown words are passed through unchanged
+passthrough_unknown: true
