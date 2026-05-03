@@ -50,10 +50,11 @@ waaz2alphaaz/
 ### Prerequisites
 
 - Python 3.10+
-- `ffmpeg` installed on your system:
+- `ffmpeg` installed on your system (the setup script will tell you if it's missing):
   ```bash
-  brew install ffmpeg        # macOS
-  sudo apt install ffmpeg    # Ubuntu/Debian
+  brew install ffmpeg               # macOS
+  sudo apt install ffmpeg           # Ubuntu/Debian
+  choco install ffmpeg              # Windows (Chocolatey)
   ```
 
 ### Install
@@ -61,10 +62,26 @@ waaz2alphaaz/
 ```bash
 git clone https://github.com/abucturab/waaz2alphaaz.git
 cd waaz2alphaaz
-python -m venv .venv
-source .venv/bin/activate     # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+python setup.py
 ```
+
+`setup.py` auto-detects your platform and handles everything:
+
+| What it does | Details |
+|---|---|
+| Creates `.venv` | Skips if already exists |
+| Installs PyTorch | Picks the right wheel: MPS (Apple Silicon), CUDA (NVIDIA), or CPU |
+| Installs all deps | From `requirements.txt` |
+| Checks ffmpeg | Warns with install instructions if missing |
+| Verifies install | Imports core packages and prints versions |
+
+**Activate after setup:**
+```bash
+source .venv/bin/activate     # macOS / Linux
+.venv\Scripts\activate        # Windows
+```
+
+Works on: macOS (Intel + Apple Silicon), Linux, Windows. Requires Python 3.10+.
 
 ---
 

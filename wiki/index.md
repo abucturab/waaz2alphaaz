@@ -18,6 +18,7 @@ Last updated: 2026-05-02
 - [ASR for Low-Resource Languages](concepts/asr_for_low_resource_languages.md) — Overview of approaches and tradeoffs for building speech recognition systems with scarce training data
 
 ## Processes
+- [Environment Setup](processes/setup_environment.md) — Cross-platform setup using setup.py: venv, PyTorch wheel selection, ffmpeg, verification
 - [Fine-tuning ASR for a New Language](processes/fine_tuning_asr_for_new_language.md) — End-to-end pipeline for adapting a pre-trained multilingual model to Lisan-ud-Dawat
 - [Data Collection for a New Language](processes/data_collection_for_new_language.md) — How to collect, record, and annotate an audio corpus when none exists
 
