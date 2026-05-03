@@ -1,26 +1,47 @@
-# Virtual env
+# ── Virtual environments ──────────────────────────────────────────────────────
 .venv/
 venv/
 env/
 
-# Python
+# ── Python ────────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.egg-info/
 .eggs/
 dist/
 build/
+*.so
 
-# IDE
+# ── Data — never commit raw or processed data ─────────────────────────────────
+data/raw/audio/*
+data/raw/text_sources/*
+data/processed/
+data/dataset/
+!data/raw/audio/.gitkeep
+!data/raw/text_sources/.gitkeep
+!data/processed/audio/.gitkeep
+!data/processed/transcripts/.gitkeep
+!data/processed/aligned/.gitkeep
+!data/dataset/.gitkeep
+
+# ── Model checkpoints ─────────────────────────────────────────────────────────
+models/*
+!models/.gitkeep
+
+# ── Notebook output ───────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Environment / secrets ─────────────────────────────────────────────────────
+.env
+.env.*
+*.key
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
 .idea/
 .vscode/
 *.swp
 *.swo
 
-# Outputs
-*.docx
-transcript.*
-
-# OS
+# ── OS ────────────────────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
